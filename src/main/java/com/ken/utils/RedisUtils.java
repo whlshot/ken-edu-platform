@@ -667,8 +667,7 @@ public class RedisUtils {
             byte[] rawkay = redisTemplate.getStringSerializer().serialize(id);
             List<byte[]> results = conn.bRPop(0, rawkay);// 无限等待
 
-            if (!org.apache.commons.collections.CollectionUtils.isEmpty(results)) {
-
+            if (EmptyUtils.isNotEmpty(results)) {
                 Object value = redisTemplate.getValueSerializer().deserialize(results.get(1));
                 info = JsonUtils.toObject(value.toString(), cls);
             }

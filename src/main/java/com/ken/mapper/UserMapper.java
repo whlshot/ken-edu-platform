@@ -1,6 +1,7 @@
 package com.ken.mapper;
 
 import com.ken.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,4 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     void saveUser(User user);
+
+    User getById(@Param("userId") Integer userId);
 }
