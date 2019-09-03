@@ -8,6 +8,8 @@ public interface IAccountService {
 
     void saveAccount(Integer schoolId, Account account);
 
+    void updateAccount(Account account);
+
     Account getAccountByEmail(String email);
 
     Account getAccountByPhone(String phone);

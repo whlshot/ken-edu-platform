@@ -17,18 +17,15 @@ import java.io.IOException;
  * @author yhq
  * @date 2018/12/24
  */
-@Configuration
-@PropertySource("classpath:properties/db.properties")
-@MapperScan(value = "com.ken.mapper")
+//@Configuration
+//@PropertySource("classpath:properties/db.properties")
+//@MapperScan(value = "com.ken.mapper")
 public class DataSourceConfiguration {
 
-    @Value("${druid.url}")
     private String druidUrl;
 
-    @Value("${druid.username}")
     private String druidUserName;
 
-    @Value("${druid.password}")
     private String druidPassword;
 
     @Bean

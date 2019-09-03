@@ -12,22 +12,22 @@ import javax.servlet.ServletRegistration.Dynamic;
  * @author yhq
  * @date 2018/12/24
  */
-public class WebInitializer implements WebApplicationInitializer {
+public class WebInitializer {//implements WebApplicationInitializer {
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-        ctx.register(MvcConfiguration.class);
-        ctx.register(DataSourceConfiguration.class);
-        ctx.setServletContext(servletContext);
-
-        Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
-        servlet.addMapping("/");
-        servlet.setLoadOnStartup(1);
-
-        //CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-        //characterEncodingFilter.setEncoding("utf-8");
-
-    }
+    //@Override
+    //public void onStartup(ServletContext servletContext) throws ServletException {
+    //    AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+    //    ctx.register(MvcConfiguration.class);
+    //    ctx.register(DataSourceConfiguration.class);
+    //    ctx.setServletContext(servletContext);
+    //
+    //    Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
+    //    servlet.addMapping("/");
+    //    servlet.setLoadOnStartup(1);
+    //
+    //    //CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+    //    //characterEncodingFilter.setEncoding("utf-8");
+    //
+    //}
 
 }

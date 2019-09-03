@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ken.mapper.SchoolMapper">
+
+    <insert id="saveSchool" parameterType="com.ken.entity.School" useGeneratedKeys="true" keyColumn="id" keyProperty="id" >
+        insert into edu_school(school_name, address, school_code, pro_code, city_code, county_code, school_system,
+        school_system_detail, edu_stage, contact_name, contact_phone, contact_email)
+        value (#{schoolName}, #{address}, #{schoolCode}, #{proCode}, #{cityCode},
+        #{countyCode}, #{schoolSystem}, #{schoolSystemDetail}, #{eduStage}, #{contactName}, #{contactPhone},
+        #{contactEmail})
+    </insert>
+    <update id="updateSchool"></update>
+    <delete id="delSchool"></delete>
+    <select id="getSchoolById" resultType="com.ken.entity.School">
+        select * from edu_school where id=#{id}
+    </select>
+</mapper>

@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @EnableCaching
 @SpringBootApplication
-@MapperScan("con.ken.mapper")
+@MapperScan("com.ken.mapper")
 public class KenEduPlatformApplication {
 
     public static void main(String[] args) {

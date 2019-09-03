@@ -37,6 +37,9 @@ public class AccountServiceImpl implements IAccountService {
     @Override
     public void saveAccount(Integer schoolId, Account account) {
         User user = new User();
+        user.setName(account.getUserName());
+        user.setEmail(account.getEmail());
+        user.setPhone(account.getPhone());
         userService.saveUser(user);
         UserOrgRole userOrgRole = new UserOrgRole();
         userOrgRole.setUserId(user.getId());
@@ -46,6 +49,11 @@ public class AccountServiceImpl implements IAccountService {
         account.setUserId(user.getId());
         account.setPassword(Constant.DEFAULT_PWD);
         this.saveAccount(account);
+    }
+
+    @Override
+    public void updateAccount(Account account) {
+
     }
 
     @Override

@@ -12,9 +12,10 @@ public class Account {
     private String password;
     private String salt;
     private String email;
-    private Integer userId;
-    private Integer delFlag;
     private String phone;
+    private Integer userId;
+    private String userName;
+    private Integer delFlag;
 
     public Integer getId() {
         return id;
@@ -80,6 +81,14 @@ public class Account {
         this.phone = phone;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
@@ -88,9 +97,10 @@ public class Account {
                 ", password='" + password + '\'' +
                 ", salt='" + salt + '\'' +
                 ", email='" + email + '\'' +
-                ", userId='" + userId + '\'' +
-                ", delFlag=" + delFlag +
                 ", phone='" + phone + '\'' +
+                ", userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", delFlag=" + delFlag +
                 '}';
     }
 }

@@ -30,12 +30,11 @@ public class SchoolController {
      * @author yhq
      * @date 2019/3/21
      */
-    @PostMapping("createSchool")
+    @PostMapping("/registerSchool")
     public ResultInfo createSchool(@RequestBody School school) {
         schoolService.saveSchool(school);
         return ResultUtils.success();
     }
-
 
     @DeleteMapping("/delSchool/{id}")
     public ResultInfo delSchool(@PathVariable Integer id) {

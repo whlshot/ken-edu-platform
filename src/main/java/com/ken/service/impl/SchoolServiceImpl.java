@@ -25,11 +25,12 @@ public class SchoolServiceImpl implements ISchoolService {
     @Override
     @Transactional
     public void saveSchool(School school) {
-        schoolMapper.insertSchool(school);
-        Account account=new Account();
+        schoolMapper.saveSchool(school);
+        Account account = new Account();
+        account.setUserName(school.getContactName());
         account.setEmail(school.getContactEmail());
         account.setPhone(school.getContactPhone());
-        accountService.saveAccount(school.getId(),account);
+        accountService.saveAccount(school.getId(), account);
     }
 
     @Override
@@ -44,6 +45,6 @@ public class SchoolServiceImpl implements ISchoolService {
 
     @Override
     public School getSchool(Integer id) {
-        return schoolMapper.selectSchoolById(id);
+        return schoolMapper.getSchoolById(id);
     }
 }

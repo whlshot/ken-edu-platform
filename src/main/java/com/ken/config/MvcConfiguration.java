@@ -9,10 +9,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * @author yhq
  * @date 2019/3/26
  */
-@Configuration
-@EnableWebMvc
-@EnableAsync
-@ComponentScan("com.ken")
+//@Configuration
+//@EnableWebMvc
+//@EnableAsync
+//@ComponentScan("com.ken")
 public class MvcConfiguration {
 
     //@Bean

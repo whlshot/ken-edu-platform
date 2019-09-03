@@ -6,4 +6,5 @@ public interface IUserService {
 
     User saveUser(User user);
 
+    User getUserById(Integer userId);
 }

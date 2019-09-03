@@ -6,7 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountMapper {
-
-
-    void saveAccount(@Param("account") Account account);
+    boolean saveAccount(Account account);
 }

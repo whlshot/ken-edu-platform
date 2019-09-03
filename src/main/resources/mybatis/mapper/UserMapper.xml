@@ -3,9 +3,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ken.mapper.UserMapper">
 
-    <insert id="saveUser">
-
+    <insert id="saveUser" parameterType="com.ken.entity.User" keyProperty="id" keyColumn="id" useGeneratedKeys="true">
+      insert into edu_user(name,email,phone) value (#{name},#{email},#{phone})
     </insert>
+
     <select id="getById" resultType="com.ken.entity.User">
         select * from edu_user where id=#{userId}
     </select>

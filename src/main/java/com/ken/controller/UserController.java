@@ -3,10 +3,7 @@ package com.ken.controller;
 import com.ken.entity.User;
 import com.ken.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author yhq
@@ -21,5 +18,10 @@ public class UserController {
     @PostMapping("/saveUser")
     public User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
+    }
+
+    @GetMapping("/getUser")
+    public User getUser(Integer userId) {
+        return userService.getUserById(userId);
     }
 }

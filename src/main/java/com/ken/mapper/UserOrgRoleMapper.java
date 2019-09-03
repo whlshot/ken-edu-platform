@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserOrgRoleMapper {
 
-    void saveUserOrgRole(@Param("userOrgRole") UserOrgRole userOrgRole);
+    boolean saveUserOrgRole(@Param("userOrgRole") UserOrgRole userOrgRole);
 }

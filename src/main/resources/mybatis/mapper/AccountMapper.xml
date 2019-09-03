@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ken.mapper.AccountMapper">
+
+    <insert id="saveAccount" parameterType="com.ken.entity.common.Account">
+        insert into edu_account(login_name,password,salt,email,phone,user_id)
+        value (#{loginName},#{password},#{salt},#{email},#{phone},#{userId})
+    </insert>
+
+</mapper>

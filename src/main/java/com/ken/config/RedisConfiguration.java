@@ -7,37 +7,27 @@ import org.springframework.context.annotation.Configuration;
  * @author yhq
  * @date 2019/5/14
  */
-@Configuration
+//@Configuration
 public class RedisConfiguration {
 
-    @Value("${redis.url}")
     private String redisUrl;
 
-    @Value("${redis.pool.maxTotal}")
     private Integer maxTotal;
 
-    @Value("${redis.pool.maxIdle}")
     private Integer maxIdle;
 
-    @Value("${redis.pool.minIdle}")
     private Integer minIdle;
 
-    @Value("${redis.pool.maxWaitMillis}")
     private Integer maxWaitMillis;
 
-    @Value("${redis.pool.testOnBorrow}")
     private boolean testOnBorrow;
 
-    @Value("${redis.pool.testOnReturn}")
     private boolean testOnReturn;
 
-    @Value("${redis.pool.timeBetweenEvictionRunsMillis}")
     private Integer timeBetweenEvictionRunsMillis;
 
-    @Value("${redis.pool.testWhileIdle}")
     private boolean testWhileIdle;
 
-    @Value("${redis.pool.numTestsPerEvictionRun}")
     private Integer numTestsPerEvictionRun;
 
     //@Bean

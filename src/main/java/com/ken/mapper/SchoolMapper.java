@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SchoolMapper {
 
-    boolean insertSchool(@Param("school") School school);
+    boolean saveSchool(School school);
 
     boolean delSchool(@Param("id") Integer id);
 
     boolean updateSchool(@Param("school") School school);
 
-    School selectSchoolById(@Param("id") Integer id);
+    School getSchoolById(@Param("id") Integer id);
 }
