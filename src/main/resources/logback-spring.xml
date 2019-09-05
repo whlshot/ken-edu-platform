@@ -13,9 +13,10 @@
 	FILEDEBUG对应debug级别，文件名以log-debug-xxx.log形式命名
 	stdout将日志信息输出到控制上，为方便开发测试使用
 -->
-<configuration scan="true" scanPeriod="60 seconds" debug="false">
+<configuration scan="true" scanPeriod="60 seconds" debug="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <contextName>ken-edu-platform</contextName>
-    <property name="LOG_PATH" value="${user.dir}/logs"/>
+    <property name="LOG_PATH" value="./logs"/>
 
     <appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 正在记录的日志文件的路径及文件名  -->
@@ -115,7 +116,7 @@
 
     <!--输出到控制台-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <Target>System.out</Target>
+        <!--<Target>System.out</Target>-->
         <encoder>
             <pattern>%-5p [%d][%mdc{mdc_accNo}][%t] %C:%L - %m %n</pattern>
         </encoder>
